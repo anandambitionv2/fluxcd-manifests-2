@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   name: tinku-pod2
   namespace: default
+  replicas: 2
 
   labels:
     app: nginx
