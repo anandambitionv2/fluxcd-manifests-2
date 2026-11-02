@@ -24,4 +24,7 @@ spec:
         name: anandhelmrepoflux
         namespace: flux-system
   targetNamespace: default
+  values:
+    replicaCount: 3
+    
  
