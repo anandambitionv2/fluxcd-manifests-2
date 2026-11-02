@@ -4,7 +4,7 @@ metadata:
   name: anandhelmrepoflux
   namespace: flux-system
 spec:
-  interval: 5m
+  interval: 1m
   url: https://anandambitionv2.github.io/myhelmchartnov2
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
@@ -13,7 +13,7 @@ metadata:
   name: anandhelmreleaseflux
   namespace: flux-system
 spec:
-  interval: 5m
+  interval: 1m
   releaseName: anandhelmreleasev2
   chart:
     spec:
