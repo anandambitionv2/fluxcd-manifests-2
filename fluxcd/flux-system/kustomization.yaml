@@ -3,15 +3,3 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
-- patches:
-  - patch: |-
-      apiVersion: v1
-      kind: ServiceAccount
-      metadata:
-        name: source-controller
-        namespace: flux-system
-        annotations:
-          # Link the Kubernetes SA to the Azure managed identity
-          azure.workload.identity/client-id: "<IDENTITY_CLIENT_ID>"
-        labels:
-          azure.workload.identity/use: "true"
