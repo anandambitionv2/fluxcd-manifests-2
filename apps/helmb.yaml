@@ -25,6 +25,6 @@ spec:
         namespace: flux-system
   targetNamespace: default
   values:
-    replicaCount: 3
+    replicaCount: 6
     
  
