@@ -1,0 +1,35 @@
+
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: OCIRepository
+metadata:
+  name: helmacrfluxrepo
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: oci://acrforhelm.azurecr.io/helm/myhelmchartnov2
+  provider: azure
+  ref:
+    tag: "0.2.0"
+
+---
+  
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: helmacrfluxrelease
+  namespace: flux-system
+spec:
+  releaseName: helmacrfluxreleasev2
+  interval: 1m
+  chartRef:
+    kind: OCIRepository
+    name: helmacrfluxrepo
+    namespace: flux-system
+
+  targetNamespace: default
+
+
+
+  upgrade:
+    cleanupOnFail: true
+
