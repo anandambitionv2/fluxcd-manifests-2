@@ -9,7 +9,7 @@ spec:
   url: oci://acrforhelm.azurecr.io/helm/myhelmchartnov2
   provider: azure
   ref:
-    tag: "0.3.0"
+    tag: "0.2.0"
 
 ---
   
