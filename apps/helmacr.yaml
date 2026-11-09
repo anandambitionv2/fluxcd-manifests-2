@@ -9,7 +9,8 @@ spec:
   url: oci://acrforhelm.azurecr.io/helm/myhelmchartnov2
   provider: azure
   ref:
-    tag: "0.2.0"
+    # tag: "0.2.0"
+    semver: ">=0.2.0 <1.0.0" #this will autoupgrade until1.0.0 but not including 1.0.0, so it will upgrade to 0.3.0 automatically when it is released in the ACR
 
 ---
   
