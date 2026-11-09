@@ -28,7 +28,7 @@ spec:
 
   targetNamespace: default
   values: 
-   replicacount: 5
+   replicaCount: 5
 
 
 
